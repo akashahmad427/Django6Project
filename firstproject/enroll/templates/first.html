@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <style>
+        body{
+            background-color: rgb(233, 233, 59);
+            text-align: center;
+        }
+        .color{
+            background-color: rgb(161, 153, 153);
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h1>Personal Information</h1>
+    <form action="" method="post" class="color">
+        {% csrf_token %}
+        <fieldset>
+        <div class="mb-3 mt-4" >
+          <label for="exampleInputEmail1" class="form-label">Name : {{form.name}}</label>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Email : {{form.email}}</label>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Roll number : {{form.roll_number}}</label>
+          </div>
+        <button type="submit" class="btn btn-primary mb-3">Submit</button>
+        </fieldset>
+      </form>
+    </div>
+</body>
+</html>

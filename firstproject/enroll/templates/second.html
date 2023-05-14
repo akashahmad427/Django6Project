@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        body{
+            background-color: black;
+            color: rgb(255, 255, 255);
+            text-align: center;
+        }
+        th,td{
+            background-color: rgb(63, 59, 59);
+            border: rgb(103, 8, 211) solid 3px;
+            align-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Thanks you, Dear<br></br> {{name}}!</h1>
+    <h3>your data is successfully save in data base</h3>
+    
+    <table>
+        <tr>
+            <th>id</th>
+            <th>Roll Number</th>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+        {% for form in forms %}
+            <tr>
+                <td>{{form.id}}</td>
+                <td>{{form.roll_number}}</td>
+                <td>{{form.name}}</td>
+                <td>{{form.email}}</td>
+            </tr>
+            {% endfor %}
+    </table>
+</body>
+</html>
